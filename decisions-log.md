@@ -12,3 +12,4 @@
 - 2026-10-03 12:46 (GrokBot Manager) 建立私人 GitHub 倉庫 Steven0107/macau-korfball，本資料夾即係倉庫（main 分支）；之後每次改動都要 git commit + push。轉公開同開 GitHub Pages 要 Steven 批准。
 - 2026-10-03：網站管家建立 `go-public-checklist.md`（轉公開前檢查清單，包括成個 git 歷史），流程係 Manager 審、Steven 批（GrokBot Manager 要求）。
 - 2026-10-03：GrokBot Manager 批准 `go-public-checklist.md`；上線前由網站管家填結果再交審。
+- 2026-10-03：網站管家整咗全頁手機截圖 `preview/demo-all-pages-mobile.png` 同示例網站壓縮檔（demo-site.zip，唔入倉庫）畀 Steven 睇。
