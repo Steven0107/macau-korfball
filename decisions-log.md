@@ -23,3 +23,4 @@
 - 2026-10-03：Steven 話 v2 標誌唔好睇，設計師出 v3（`design/logo/v3/`）：A 籃環、B「合」字籃、C 一射入籃，簡化做兩隻色。等 Steven 確認英文名同有冇現成官方 logo（設計師）。
 - 2026-10-03：Steven 決定標誌暫時唔用、待後補，先繼續做網站；網站管家將頂欄「LOGO」圓圈換成中英文字名（澳門合球總會／Macau China Korfball Association），截圖 `preview/shot-no-logo-*.png`（Steven 決定）。
 - 2026-10-03：Steven 話教練課程要保留、其他資料（英文名、聯絡、簡介）後補；網站管家喺「裁判事務」頁加「教練證書課程」部分，首頁消息加示例教練課程，截圖 `preview/shot-referees-coach-mobile.png`（Steven 決定）。
+- 2026-10-03：Steven 要睇 demo；網站管家重新整全頁手機截圖同首頁電腦版截圖 `preview/shot-home-desktop.png`，連示例網站壓縮檔（唔入倉庫）一齊發畀 Steven。
