@@ -6,3 +6,8 @@
 3. 動感方標：`3-square.svg`、`3-icon.svg`
 待 Steven 決定：揀邊款；籃用真比賽黃色（現時）定改返品牌橙色。
 v1 舊方案保留喺上一層 `design/logo/`。
+
+## 更新（2026-10-03 12:59）
+- Steven 要求：標誌入面個球改做黃色（#FFC20E），籃同球都係黃色。
+- 網站改淺色，新增淺色底完整版：`2-circle-light.svg`、`3-square-light.svg`（第 1 款自帶深藍底，唔使另出）。
+- 淺色效果預覽：`logo-options-v3-light.png`（`preview-light.html`）。
