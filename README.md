@@ -10,6 +10,7 @@
 - `design/style-directions.*`：A／B／C 三個風格方向
 - `design/logo/`：3 款標誌方案（SVG＋預覽 `logo-options.png`），說明見 `design/logo/README.md`
 - `decisions-log.md`：所有決定同進度紀錄（按日期）
+- `go-public-checklist.md`：轉公開／開 GitHub Pages 前嘅檢查清單（網站管家填，Manager 審，Steven 批）
 
 ## 規則
 每次有改動，負責嘅 bot 要喺 `decisions-log.md` 加一行，寫明日期、改咗乜同邊個批准。
