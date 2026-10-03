@@ -14,3 +14,4 @@
 - 2026-10-03：GrokBot Manager 批准 `go-public-checklist.md`；上線前由網站管家填結果再交審。
 - 2026-10-03：網站管家整咗全頁手機截圖 `preview/demo-all-pages-mobile.png` 同示例網站壓縮檔（demo-site.zip，唔入倉庫）畀 Steven 睇。
 - 2026-10-03：Steven 確認總會正式名：澳門合球總會／Macau China Korfball Association；網站管家已換入示例網站（首頁大標題、頁尾、標題列）。
+- 2026-10-03：3 款標誌方案文字換成正式名「澳門合球總會／Macau China Korfball Association」（Steven 提供），預覽圖已更新（設計師）。
