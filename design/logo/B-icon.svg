@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><circle cx="60" cy="60" r="60" fill="#14213D"/>
+<g transform="translate(60,62) scale(0.62)">
+<g transform="translate(0,-46) scale(1.25)"><g id="ball"><circle r="16" fill="#FFFFFF"/><path d="M-16,0 C-6,-4 6,-4 16,0 M-4,-15.5 C-10,-5 -10,6 -3,15.7 M5,-15.2 C12,-6 12,6 6,14.8" fill="none" stroke="#14213D" stroke-width="2.2"/></g></g>
+<path d="M0,-14 C-20,6 -20,40 0,58 C20,40 20,6 0,-14 Z" fill="#FF7A00"/>
+<path d="M-8,58 C-40,52 -62,26 -60,0 C-38,4 -18,24 -8,58 Z" fill="#FF7A00"/>
+<path d="M8,58 C40,52 62,26 60,0 C38,4 18,24 8,58 Z" fill="#FF7A00"/>
+<path d="M-60,70 Q0,56 60,70" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/></g></svg>

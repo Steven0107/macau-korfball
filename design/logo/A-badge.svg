@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><defs>
+<path id="top" d="M40,120 A80,80 0 0 1 200,120"/><path id="bot" d="M30,120 A90,90 0 0 0 210,120"/></defs>
+<circle cx="120" cy="120" r="116" fill="#14213D"/><circle cx="120" cy="120" r="108" fill="none" stroke="#FF7A00" stroke-width="5"/>
+<circle cx="120" cy="120" r="66" fill="#1B2A4A"/>
+<text font-family="Noto Sans CJK TC" font-weight="700" font-size="21" fill="#FFFFFF" letter-spacing="2"><textPath href="#top" startOffset="50%" text-anchor="middle">澳門合球總會</textPath></text>
+<text font-family="Noto Sans CJK TC" font-weight="700" font-size="15" fill="#FF7A00" letter-spacing="3"><textPath href="#bot" startOffset="50%" text-anchor="middle">MACAU KORFBALL</textPath></text>
+<circle cx="40" cy="128" r="3.5" fill="#FF7A00"/><circle cx="200" cy="128" r="3.5" fill="#FF7A00"/>
+<g transform="translate(120,120)">
+<rect x="-4" y="-34" width="8" height="84" rx="2" fill="#FFFFFF" transform="translate(6,0)"/>
+<path d="M10,-40 L48,-40 L44,-14 L14,-14 Z" fill="#FF7A00"/><ellipse cx="29" cy="-40" rx="19" ry="5" fill="#FFB066"/>
+<path d="M-30,-30 Q-5,-75 26,-44" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="4 5" stroke-linecap="round"/>
+<g transform="translate(-34,-18) scale(0.9)"><g id="ball"><circle r="16" fill="#FFFFFF"/><path d="M-16,0 C-6,-4 6,-4 16,0 M-4,-15.5 C-10,-5 -10,6 -3,15.7 M5,-15.2 C12,-6 12,6 6,14.8" fill="none" stroke="#14213D" stroke-width="2.2"/></g></g></g></svg>
