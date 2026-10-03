@@ -15,3 +15,4 @@
 - 2026-10-03：網站管家整咗全頁手機截圖 `preview/demo-all-pages-mobile.png` 同示例網站壓縮檔（demo-site.zip，唔入倉庫）畀 Steven 睇。
 - 2026-10-03：Steven 確認總會正式名：澳門合球總會／Macau China Korfball Association；網站管家已換入示例網站（首頁大標題、頁尾、標題列）。
 - 2026-10-03：3 款標誌方案文字換成正式名「澳門合球總會／Macau China Korfball Association」（Steven 提供），預覽圖已更新（設計師）。
+- 2026-10-03：Steven 叫搜尋合球做靈感；網站管家整理 `korfball-inspiration.md`（IKF 規則外觀重點、其他總會網站參考、對標誌同網站嘅建議）。

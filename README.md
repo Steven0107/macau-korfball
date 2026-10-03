@@ -10,6 +10,7 @@
 - `design/style-directions.*`：A／B／C 三個風格方向
 - `design/logo/`：3 款標誌方案（SVG＋預覽 `logo-options.png`），說明見 `design/logo/README.md`
 - `decisions-log.md`：所有決定同進度紀錄（按日期）
+- `korfball-inspiration.md`：合球外觀（IKF 規則）同其他總會網站參考，畀網站同標誌做靈感
 - `go-public-checklist.md`：轉公開／開 GitHub Pages 前嘅檢查清單（網站管家填，Manager 審，Steven 批）
 
 ## 規則
