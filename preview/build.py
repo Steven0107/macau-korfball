@@ -73,7 +73,7 @@ def page(lang, p):
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css"></head><body>
 <div class="demo">{DEMO[lang]}</div>
-<header><div class="wrap bar"><a class="logo" href="index.html" aria-label="{NAV[lang]["index"]}">LOGO</a>
+<header><div class="wrap bar"><a class="brand" href="index.html" aria-label="{NAV[lang]["index"]}"><b>{ORG["zh"]}</b><small>{ORG["en"]}</small></a>
 <input type="checkbox" id="menu" class="menu-toggle"><label for="menu" class="menu-btn" aria-label="Menu"><span></span>{"選單" if lang=="zh" else "Menu"}</label>
 <nav>{nav}</nav><a class="lang" href="../{other}/{p}.html">{"EN" if lang=="zh" else "中文"}</a></div></header>
 <main>{body(lang,p)}</main>
@@ -88,7 +88,9 @@ a{color:inherit;text-decoration:none}
 .demo{background:var(--sample);color:#222;text-align:center;font-size:13px;font-weight:700;padding:6px}
 header{background:var(--surface);border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:5;box-shadow:0 1px 4px rgba(20,33,61,.06)}
 .bar{display:flex;align-items:center;gap:16px;min-height:64px;flex-wrap:wrap}
-.logo{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+/* 標誌待後補（Steven 2026-10-03）：暫時用中英文字名做頂欄品牌 */
+.brand{display:flex;flex-direction:column;justify-content:center;min-height:44px;line-height:1.2;color:var(--navy);border-left:4px solid var(--accent);padding-left:10px}
+.brand b{font-size:17px;font-weight:700}.brand small{font-size:11px;color:var(--text-2)}
 nav{display:flex;gap:20px;flex:1;font-size:15px;align-items:center}
 nav a{color:var(--text-2);padding:10px 0;white-space:nowrap;border-bottom:2px solid transparent}
 nav a.on,nav a:hover{color:var(--accent-text);border-bottom-color:var(--accent)}
