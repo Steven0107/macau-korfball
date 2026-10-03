@@ -7,7 +7,7 @@ NAV = {
  "en": {"index":"Home","about":"About Us","competitions":"Competitions","referees":"Referees","news":"News","downloads":"Downloads","contact":"Contact Us"},
 }
 TBD = {"zh":"〔待 Steven 提供〕","en":"[To be provided by Steven]"}
-ORG = {"zh":"〔總會正式中文名〕","en":"[Official English Name]"}
+ORG = {"zh":"澳門合球總會","en":"Macau China Korfball Association"}  # Steven 2026-10-03 確認
 DEMO = {"zh":"示例預覽：所有內容都係示例，未經確認，唔係真資料。","en":"Preview only: all content is example data, not confirmed."}
 
 def cards(lang, rows, title=None):
@@ -27,8 +27,8 @@ def body(lang, p):
     z = lang=="zh"
     if p=="index":
         return f'''<section class="hero"><div class="wrap">
-<h1>{"澳門<em>合球</em>" if z else "Macau <em>Korfball</em>"}</h1>
-<p class="lead">{ORG[lang]}</p>
+<h1>{"澳門<em>合球</em>總會" if z else "Macau China <em>Korfball</em> Association"}</h1>
+<p class="lead">{ORG["en"] if z else ORG["zh"]}</p>
 <p class="sub">{"一句總會簡介（示例）" if z else "One-line introduction (example)"}</p>
 <a class="btn" href="contact.html">{NAV[lang]["contact"]}</a></div></section>
 <section class="wrap sec"><h2>{NAV[lang]["news"]}</h2>
