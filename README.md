@@ -8,7 +8,7 @@
 - `preview/`：示例網站預覽（中英文版，`preview/site/`）同截圖，**未上線**；改內容或樣式要改 `preview/build.py` 再重新生成，唔好直接改 HTML
 - `design/style-B-spec.md`：B 風格規格（深藍 #14213D、橙 #FF7A00、Noto Sans TC 400/700）
 - `design/style-directions.*`：A／B／C 三個風格方向
-- `design/logo/`：3 款標誌方案（SVG＋預覽 `logo-options.png`），說明見 `design/logo/README.md`
+- `design/logo/`：3 款標誌方案（SVG＋預覽 `logo-options.png`），說明見 `design/logo/README.md`；**v2（最新，跟真合球籃修改）喺 `design/logo/v2/`**
 - `decisions-log.md`：所有決定同進度紀錄（按日期）
 - `korfball-inspiration.md`：合球外觀（IKF 規則）同其他總會網站參考，畀網站同標誌做靈感
 - `go-public-checklist.md`：轉公開／開 GitHub Pages 前嘅檢查清單（網站管家填，Manager 審，Steven 批）

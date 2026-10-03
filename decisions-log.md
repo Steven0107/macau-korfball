@@ -16,3 +16,4 @@
 - 2026-10-03：Steven 確認總會正式名：澳門合球總會／Macau China Korfball Association；網站管家已換入示例網站（首頁大標題、頁尾、標題列）。
 - 2026-10-03：3 款標誌方案文字換成正式名「澳門合球總會／Macau China Korfball Association」（Steven 提供），預覽圖已更新（設計師）。
 - 2026-10-03：Steven 叫搜尋合球做靈感；網站管家整理 `korfball-inspiration.md`（IKF 規則外觀重點、其他總會網站參考、對標誌同網站嘅建議）。
+- 2026-10-03：標誌 v2（`design/logo/v2/`）：跟 IKF 規則將籃改成黃色直身圓筒、冇籃板；第 2 款蓮花改為「360° 合作圈」（4 男 4 女），避免似區徽。等 Steven 揀款同決定籃用黃定橙（設計師）。
