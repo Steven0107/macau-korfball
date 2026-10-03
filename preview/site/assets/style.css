@@ -1,6 +1,6 @@
 *{box-sizing:border-box;margin:0;padding:0}
-/* 淺色版（Steven 2026-10-03 要求由深色改淺色）。橙字喺淺底一律用 --accent-text #C25700（規格：#FF7A00 配白底對比唔夠）。 */
-:root{--bg:#F6F8FB;--surface:#FFFFFF;--hero:#EEF2F8;--hero-2:#E6ECF5;--navy:#14213D;--line:#DDE3EE;--photo:#D5DDEA;--accent:#FF7A00;--accent-text:#C25700;--text:#14213D;--text-2:#4A5672;--sample:#FFD54A}
+/* 淺色版（Steven 2026-10-03 要求由深色改淺色）。橙字喺淺底一律用 --accent-text #AD4C00（規格：#FF7A00 配白底對比唔夠）。 */
+:root{--bg:#F6F8FB;--surface:#FFFFFF;--hero:#EEF2F8;--hero-2:#E6ECF5;--navy:#14213D;--line:#DDE3EE;--photo:#D5DDEA;--accent:#FF7A00;--accent-text:#AD4C00;--text:#14213D;--text-2:#4A5672;--sample:#FFD54A}
 body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC","Noto Sans CJK TC",sans-serif;font-weight:400;font-size:16px;line-height:1.6}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
