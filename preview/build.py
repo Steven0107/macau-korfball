@@ -76,7 +76,7 @@ def page(lang, p):
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css"></head><body>
 <div class="demo">{DEMO[lang]}</div>
-<header><div class="wrap bar"><a class="brand" href="index.html" aria-label="{NAV[lang]["index"]}"><b>{ORG["zh"]}</b><small>{ORG["en"]}</small></a>
+<header><div class="wrap bar"><a class="brand" href="index.html" aria-label="{NAV[lang]["index"]}"><img src="../assets/logo.jpg" alt="{ORG[lang]}"><span><b>{ORG["zh"]}</b><small>{ORG["en"]}</small></span></a>
 <input type="checkbox" id="menu" class="menu-toggle"><label for="menu" class="menu-btn" aria-label="Menu"><span></span>{"選單" if lang=="zh" else "Menu"}</label>
 <nav>{nav}</nav><a class="lang" href="../{other}/{p}.html">{"EN" if lang=="zh" else "中文"}</a></div></header>
 <main>{body(lang,p)}</main>
@@ -91,8 +91,10 @@ a{color:inherit;text-decoration:none}
 .demo{background:var(--sample);color:#222;text-align:center;font-size:13px;font-weight:700;padding:6px}
 header{background:var(--surface);border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:5;box-shadow:0 1px 4px rgba(20,33,61,.06)}
 .bar{display:flex;align-items:center;gap:16px;min-height:64px;flex-wrap:wrap}
-/* 標誌待後補（Steven 2026-10-03）：暫時用中英文字名做頂欄品牌 */
-.brand{display:flex;flex-direction:column;justify-content:center;min-height:44px;line-height:1.2;color:var(--navy);border-left:4px solid var(--accent);padding-left:10px}
+/* 官方標誌（Steven 2026-10-03 提供，design/logo/official/）+ 中英文字名 */
+.brand{display:flex;align-items:center;gap:10px;min-height:44px;line-height:1.2;color:var(--navy)}
+.brand img{height:48px;width:auto;border-radius:6px;display:block}
+.brand span{display:flex;flex-direction:column}
 .brand b{font-size:17px;font-weight:700}.brand small{font-size:11px;color:var(--text-2)}
 nav{display:flex;gap:20px;flex:1;font-size:15px;align-items:center}
 nav a{color:var(--text-2);padding:10px 0;white-space:nowrap;border-bottom:2px solid transparent}
@@ -128,6 +130,7 @@ footer{background:var(--navy);color:#C9D2E3;padding:24px 0;font-size:13px;margin
  .menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:16px;height:2px;background:var(--text);position:relative}
  .menu-btn span::before,.menu-btn span::after{content:"";position:absolute}.menu-btn span::before{top:-5px}.menu-btn span::after{top:5px}
  .lang{margin-left:0}
+ .bar{gap:10px}.brand{gap:8px}.brand img{height:38px}.brand b{font-size:15px}.brand small{display:none}
  nav{display:none;order:3;flex:0 0 100%;flex-direction:column;gap:0;padding-bottom:8px}
  nav a{padding:12px 4px;border-bottom:1px solid var(--line);font-size:16px}
  nav a.on{border-bottom-color:var(--accent)}
@@ -136,10 +139,12 @@ footer{background:var(--navy);color:#C9D2E3;padding:24px 0;font-size:13px;margin
  .hero{padding:48px 0}.hero h1{font-size:32px}.sec h2{font-size:22px}
  .photos{grid-template-columns:repeat(2,1fr)}
 }
+@media(max-width:379px){.brand span{display:none}}
 '''
 shutil.rmtree("site",ignore_errors=True)
 os.makedirs("site/assets",exist_ok=True)
 open("site/assets/style.css","w").write(CSS)
+shutil.copy("../design/logo/official/mcka-logo-official.jpg","site/assets/logo.jpg")
 for lang in ("zh","en"):
     os.makedirs(f"site/{lang}",exist_ok=True)
     for p in ["index"]+PAGES:

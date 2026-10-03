@@ -6,6 +6,7 @@
 ## 檔案位置
 - `site-plan.md`：網站架構同內容計劃（網站管家）
 - `preview/`：示例網站預覽（中英文版，`preview/site/`）同截圖，**未上線**；改內容或樣式要改 `preview/build.py` 再重新生成，唔好直接改 HTML
+- `design/logo/official/mcka-logo-official.jpg`：Steven 2026-10-03 提供嘅總會官方標誌（已刪 EXIF），網站頂欄用緊；唔好自行修改
 - `design/style-B-spec.md`：B 風格規格（深藍 #14213D、橙 #FF7A00、Noto Sans TC 400/700）
 - `design/style-directions.*`：A／B／C 三個風格方向
 - `design/logo/`：3 款標誌方案（SVG＋預覽 `logo-options.png`），說明見 `design/logo/README.md`；v2 喺 `design/logo/v2/`；**v3（最新，簡化兩色）喺 `design/logo/v3/`**
