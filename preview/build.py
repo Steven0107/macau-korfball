@@ -34,6 +34,7 @@ def body(lang, p):
 <section class="wrap sec"><h2>{NAV[lang]["news"]}</h2>
 {item("示例比賽" if z else "Example match","日期待定" if z else "Date TBC","賽事" if z else "Match")}
 {item("示例裁判課程" if z else "Example referee course","日期待定" if z else "Date TBC","裁判" if z else "Referees")}
+{item("示例教練課程" if z else "Example coach course","日期待定" if z else "Date TBC","教練" if z else "Coaches")}
 {item("示例活動" if z else "Example event","日期待定" if z else "Date TBC","活動" if z else "Event")}
 <a class="more" href="news.html">{"睇全部消息 ›" if z else "All news ›"}</a></section>'''
     if p=="about":
@@ -47,7 +48,9 @@ def body(lang, p):
     if p=="referees":
         return sec(lang,p,
           '<h3>'+("裁判證書課程" if z else "Referee certification courses")+'</h3>'
-          + cards(lang,[("日期","Dates"),("資格要求","Requirements"),("費用","Fee"),("報名方法","How to apply")],"示例課程" if z else "Example course")
+          + cards(lang,[("日期","Dates"),("資格要求","Requirements"),("費用","Fee"),("報名方法","How to apply")],"示例裁判課程" if z else "Example referee course")
+          + '<h3>'+("教練證書課程" if z else "Coach certification courses")+'</h3>'  # Steven 2026-10-03：教練課程要保留，暫放裁判事務
+          + cards(lang,[("日期","Dates"),("資格要求","Requirements"),("費用","Fee"),("報名方法","How to apply")],"示例教練課程" if z else "Example coach course")
           + '<h3>'+("裁判資訊" if z else "Referee information")+'</h3>'
           + cards(lang,[("註冊裁判名單","Registered referees"),("規則更新","Rule updates")]))
     if p=="news":
