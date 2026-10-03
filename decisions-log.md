@@ -25,3 +25,4 @@
 - 2026-10-03：Steven 話教練課程要保留、其他資料（英文名、聯絡、簡介）後補；網站管家喺「裁判事務」頁加「教練證書課程」部分，首頁消息加示例教練課程，截圖 `preview/shot-referees-coach-mobile.png`（Steven 決定）。
 - 2026-10-03：Steven 要睇 demo；網站管家重新整全頁手機截圖同首頁電腦版截圖 `preview/shot-home-desktop.png`，連示例網站壓縮檔（唔入倉庫）一齊發畀 Steven。
 - 2026-10-03：Steven 提供總會官方標誌（綠底白字「Macau China Korfball Association」）；網站管家刪走 EXIF 後存喺 `design/logo/official/`，示例網站頂欄改用官方標誌加中文名（手機版收細、窄屏只顯示標誌），英文名同標誌一致，即係 Macau China Korfball Association（Steven 提供）。
+- 2026-10-03：設計師將總會官方 logo 重製成向量清晰版（`design/logo/official/web/`），主體照原圖描，底行英文細字用 Michroma 重排；出深藍、綠、白三個單色版同 600／1200px PNG，並出頂欄配色兩個方案（保留深藍橙／轉總會綠）。未換上網站，等 Steven 批准（設計師）。

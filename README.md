@@ -16,3 +16,4 @@
 
 ## 規則
 每次有改動，負責嘅 bot 要喺 `decisions-log.md` 加一行，寫明日期、改咗乜同邊個批准。
+- `design/logo/official/web/`：官方 logo 向量清晰版（深藍／綠／白 SVG 同 PNG）、原圖對照、頂欄配色方案（待批）
