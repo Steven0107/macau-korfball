@@ -1,4 +1,4 @@
-# 示例預覽生成器：風格 B 淺色版（跟 design/style-B-spec.md，2026-10-03 Steven 要求改淺色）。所有內容都係示例或者待提供，唔係真資料。
+# 示例預覽生成器：總會綠淺色版（顏色跟 design/style-green-spec.md，2026-10-04 Steven 揀；字體同版面跟 design/style-B-spec.md）。所有內容都係示例或者待提供，唔係真資料。
 # 主菜單跟 Steven 2026-10-03 指定：本會簡介、賽事資料、裁判事務、最新消息、下載區、聯繫我們（首頁由標誌入）。
 import os, shutil
 PAGES = ["about","competitions","referees","news","downloads","contact"]
@@ -83,13 +83,13 @@ def page(lang, p):
 <footer><div class="wrap">© {ORG[lang]} · {TBD[lang]}</div></footer></body></html>'''
 
 CSS = '''*{box-sizing:border-box;margin:0;padding:0}
-/* 淺色版（Steven 2026-10-03 要求由深色改淺色）。橙字喺淺底一律用 --accent-text #AD4C00（規格：#FF7A00 配白底對比唔夠）。 */
-:root{--bg:#F6F8FB;--surface:#FFFFFF;--hero:#EEF2F8;--hero-2:#E6ECF5;--navy:#14213D;--line:#DDE3EE;--photo:#D5DDEA;--accent:#FF7A00;--accent-text:#AD4C00;--text:#14213D;--text-2:#4A5672;--sample:#FFD54A}
+/* 總會綠淺色版（Steven 2026-10-04 揀方案二，跟 design/style-green-spec.md）。綠底一律白字（--on-accent）。--navy 而家係深綠 #0A4314。 */
+:root{--bg:#F5F8F5;--surface:#FFFFFF;--hero:#EAF3EA;--hero-2:#E1EDE2;--navy:#0A4314;--line:#D8E3DA;--photo:#CFDDD2;--accent:#0B6A12;--accent-text:#0B6A12;--on-accent:#FFFFFF;--text:#18261C;--text-2:#4B5B50;--sample:#FFD54A}
 body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC","Noto Sans CJK TC",sans-serif;font-weight:400;font-size:16px;line-height:1.6}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 .demo{background:var(--sample);color:#222;text-align:center;font-size:13px;font-weight:700;padding:6px}
-header{background:var(--surface);border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:5;box-shadow:0 1px 4px rgba(20,33,61,.06)}
+header{background:var(--surface);border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:5;box-shadow:0 1px 4px rgba(10,67,20,.08)}
 .bar{display:flex;align-items:center;gap:16px;min-height:64px;flex-wrap:wrap}
 /* 官方標誌（Steven 2026-10-03 提供，design/logo/official/）+ 中英文字名 */
 .brand{display:flex;align-items:center;gap:10px;min-height:44px;line-height:1.2;color:var(--navy)}
@@ -100,15 +100,15 @@ nav{display:flex;gap:20px;flex:1;font-size:15px;align-items:center}
 nav a{color:var(--text-2);padding:10px 0;white-space:nowrap;border-bottom:2px solid transparent}
 nav a.on,nav a:hover{color:var(--accent-text);border-bottom-color:var(--accent)}
 nav a.cta{color:var(--accent-text);border:1.5px solid var(--accent-text);border-radius:6px;padding:7px 14px;line-height:1.3;font-weight:700}
-nav a.cta:hover,nav a.cta.on{background:var(--accent);border-color:var(--accent);color:var(--navy)}
+nav a.cta:hover,nav a.cta.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .lang{background:var(--navy);color:#fff;font-weight:700;padding:0 14px;min-height:44px;display:flex;align-items:center;border-radius:22px;font-size:13px;margin-left:auto}
 .menu-toggle{display:none}.menu-btn{display:none}
 .hero{background:repeating-linear-gradient(-55deg,var(--hero) 0 22px,var(--hero-2) 22px 44px);padding:72px 0;border-bottom:1px solid var(--line)}
-.hero h1{font-size:56px;font-weight:700;line-height:1.15;color:var(--navy)}
+.hero h1{font-size:56px;font-weight:700;line-height:1.15;color:var(--text)}
 .en .hero h1{text-transform:uppercase}
 .hero h1 em{color:var(--accent-text);font-style:normal}
 .lead{font-size:20px;font-weight:700;margin-top:10px}.sub{color:var(--text-2);margin:6px 0 24px}
-.btn{display:inline-block;background:var(--accent);color:var(--navy);font-weight:700;padding:12px 22px;border-radius:6px}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);font-weight:700;padding:12px 22px;border-radius:6px}
 .en .btn{text-transform:uppercase}
 .sec{padding:40px 20px}
 .sec h2{color:var(--accent-text);font-size:26px;margin-bottom:16px}
@@ -124,7 +124,7 @@ nav a.cta:hover,nav a.cta.on{background:var(--accent);border-color:var(--accent)
 .photos div{background:var(--photo);border-radius:4px;aspect-ratio:4/3}
 .tbl{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:560px;background:var(--surface)}
 th{background:var(--navy);color:#fff;text-align:left;padding:10px}td{padding:10px;border-top:1px solid var(--line)}
-footer{background:var(--navy);color:#C9D2E3;padding:24px 0;font-size:13px;margin-top:24px}
+footer{background:var(--navy);color:#C9DCCB;padding:24px 0;font-size:13px;margin-top:24px}
 @media(max-width:760px){
  .menu-btn{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:22px;font-size:14px;cursor:pointer;margin-left:auto}
  .menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:16px;height:2px;background:var(--text);position:relative}
