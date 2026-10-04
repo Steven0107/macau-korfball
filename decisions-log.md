@@ -26,3 +26,4 @@
 - 2026-10-03：Steven 要睇 demo；網站管家重新整全頁手機截圖同首頁電腦版截圖 `preview/shot-home-desktop.png`，連示例網站壓縮檔（唔入倉庫）一齊發畀 Steven。
 - 2026-10-03：Steven 提供總會官方標誌（綠底白字「Macau China Korfball Association」）；網站管家刪走 EXIF 後存喺 `design/logo/official/`，示例網站頂欄改用官方標誌加中文名（手機版收細、窄屏只顯示標誌），英文名同標誌一致，即係 Macau China Korfball Association（Steven 提供）。
 - 2026-10-03：設計師將總會官方 logo 重製成向量清晰版（`design/logo/official/web/`），主體照原圖描，底行英文細字用 Michroma 重排；出深藍、綠、白三個單色版同 600／1200px PNG，並出頂欄配色兩個方案（保留深藍橙／轉總會綠）。未換上網站，等 Steven 批准（設計師）。
+- 2026-10-04：Steven 揀咗方案二（總會綠）。設計師出 `design/style-green-spec.md` 同 `palette-green.png`：主色 #0B6A12、深綠 #0A4314、正文 #18261C、次要字 #4B5B50、淺綠底色；全部對比過 AA；綠底一律白字；首頁大標題改用正文色令「合球」突出；橙色同深藍停用。另加 `logo/official/web/mcka-logo-badge-green.svg`（網站綠底白字版，未批）。頂欄暫時照用官方原圖（Steven 決定，設計師執行）。

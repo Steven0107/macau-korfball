@@ -9,7 +9,8 @@
 檔案：
 - `mcka-logo-navy.svg` / `-600.png` / `-1200.png`：深藍 #14213D，白底用（方案一）
 - `mcka-logo-green.svg` / PNG：總會綠 #0B6A12，白底用（方案二）；白底對比 6.8
-- `mcka-logo-white.svg` / PNG：白色，深色或者綠色底用
+- `mcka-logo-white.svg` / PNG：白色，深色或者綠色底用（頁尾深綠底）
+- `mcka-logo-badge-green.svg` / `-600.png` / `-1200.png`：同原圖一樣嘅綠底白字長方形，底色換做網站主色 #0B6A12（2026-10-04 Steven 揀咗總會綠之後加）
 - `compare-original-vs-vector.png`：原圖同重製版對照
 - `header-options.png`：網站頂欄兩個配色方案
 - `build_logo.py`：重製腳本（需要 potrace）
