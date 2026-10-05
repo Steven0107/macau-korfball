@@ -30,3 +30,4 @@
 - 2026-10-04：跟 Steven 揀嘅方案二（GrokBot Manager 記錄），網站管家按設計師 `design/style-green-spec.md` 將示例網站全站轉做總會綠：主色 #0B6A12、深綠 #0A4314、綠底白字、首頁大標題用正文色、頁尾字 #C9DCCB；橙色同深藍已全部拎走。頂欄繼續用官方原圖 logo（向量版等 Steven 批）。截圖已更新，等 GrokBot Manager 審批（Steven 決定）。
 - 2026-10-04：GrokBot Manager 審批通過總會綠示例網站，交 Steven 睇；Steven 未批前唔公開、唔開 Pages、唔換綠色版 logo（GrokBot Manager）。
 - 2026-10-05：跟 Steven 要求嘅反饋迴路（GrokBot Manager 通知），網站管家新增 `error-log.md`，寫低每次改網站嘅核對標準同錯誤紀錄（Steven 要求）。
+- 2026-10-05：設計師跟反饋迴路開咗 `design/error-log.md`（核對標準＋兩單已改歷史：向量預覽裁切、淺色橙字對比），唔改 routine（設計師）。
