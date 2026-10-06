@@ -1,6 +1,6 @@
 # 標誌方案（2026-10-03，設計師）
 預覽：logo-options.png（preview.html）。全部係原創 SVG，色碼跟風格 B（#14213D 深藍、#FF7A00 橙、白）。
-1. 籃框徽章：A-badge.svg（完整）、A-icon.svg（圓形，頂欄／分頁圖示用）
+1. 合球籃徽章：A-badge.svg（完整）、A-icon.svg（圓形，頂欄／分頁圖示用）
 2. 蓮花合球：B-lotus.svg（完整）、B-icon.svg（圓形）
 3. 動感方標：C-wordmark.svg（橫向，圖案加字）、C-icon.svg（圓角方形）
 注意：
