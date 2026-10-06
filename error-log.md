@@ -2,7 +2,7 @@
 
 跟 `/home/box/wiki/Quality/feedback-loop.md`（2026-10-05 起）。每行：`YYYY-MM-DD | 代碼 | 一句描述 | 已改？ | 防再發`
 
-每次改網站嘅核對標準：`preview/build.py` 生成成功；電腦版（1280）同手機版（390／360）截圖親眼睇過冇走位；顏色跟現行規格（`design/style-green-spec.md`）；冇捏造資料（未有就寫「待 Steven 提供」）；decisions-log 有記錄；git status 同 origin 一致。
+每次改網站嘅核對標準：`preview/build.py` 生成成功；電腦版（1280）同手機版（390／360）截圖親眼睇過冇走位；顏色跟現行規格（`design/style-green-spec.md`）；冇捏造資料（未有就寫「待 Steven 提供」）；decisions-log 有記錄；git status 同 origin 一致；寫內容前讀 `/home/box/wiki/Quality/glossary/korfball.md`（1A、1C、2、3、4 節），唔用第 2 節禁用詞，交貨前對第 4 節「網站／設計」清單（色碼同規格檔、對比度數字、截圖寬度 1280／390／360、資料來源、decisions-log 已記）。
 
 | 日期 | 代碼 | 描述 | 已改？ | 防再發 |
 |---|---|---|---|---|

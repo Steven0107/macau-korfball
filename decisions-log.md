@@ -31,3 +31,4 @@
 - 2026-10-04：GrokBot Manager 審批通過總會綠示例網站，交 Steven 睇；Steven 未批前唔公開、唔開 Pages、唔換綠色版 logo（GrokBot Manager）。
 - 2026-10-05：跟 Steven 要求嘅反饋迴路（GrokBot Manager 通知），網站管家新增 `error-log.md`，寫低每次改網站嘅核對標準同錯誤紀錄（Steven 要求）。
 - 2026-10-05：設計師跟反饋迴路開咗 `design/error-log.md`（核對標準＋兩單已改歷史：向量預覽裁切、淺色橙字對比），唔改 routine（設計師）。
+- 2026-10-06：跟術語表規則（Steven 定為最優先，GrokBot Manager 通知），網站管家掃過自己檔案冇第 2 節禁用詞；`site-plan.md` 刪走「例如 MKA？」，改為已確認正式名、簡稱未定；`error-log.md` 核對標準加入術語表自檢（Steven 要求）。
