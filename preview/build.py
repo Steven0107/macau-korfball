@@ -2,6 +2,7 @@
 # 主菜單跟 Steven 2026-10-03 指定：本會簡介、賽事資料、裁判事務、最新消息、下載區、聯繫我們（首頁由標誌入）。
 import os, shutil
 PAGES = ["about","competitions","referees","news","downloads","contact"]
+REFEREES = ["LENG HOU KONG","陳潁鍶","黃龍昇","吳芷澄","馮錫文","李因珊","李文锦","歐子楊","陳紜峰","許錦明","張安莉","梁梓鋒","戚耀基","吳亦豐","王明興","楊鍵深","楊艷萍","孙洪","黃思瀚","凌嘉禧"]
 NAV = {
  "zh": {"index":"首頁","about":"本會簡介","competitions":"賽事資料","referees":"裁判事務","news":"最新消息","downloads":"下載區","contact":"聯繫我們"},
  "en": {"index":"Home","about":"About Us","competitions":"Competitions","referees":"Referees","news":"News","downloads":"Downloads","contact":"Contact Us"},
@@ -38,7 +39,7 @@ def body(lang, p):
 {item("示例活動" if z else "Example event","日期待定" if z else "Date TBC","活動" if z else "Event")}
 <a class="more" href="news.html">{"睇全部消息 ›" if z else "All news ›"}</a></section>'''
     if p=="about":
-        return sec(lang,p,cards(lang,[("簡介","Introduction"),("成立年份","Founded"),("宗旨","Mission"),("所屬國際組織","Affiliations"),("理事會","Board")]))
+        return sec(lang,p,cards(lang,[("簡介","Introduction"),("成立年份","Founded"),("宗旨","Mission"),("理事會","Board")]))
     if p=="competitions":
         h = ["日期","時間","地點","對賽","組別","賽果"] if z else ["Date","Time","Venue","Match","Division","Result"]
         ex = ["示例","—","示例場地","A隊 對 B隊","示例組","—"] if z else ["Example","—","Example venue","Team A vs Team B","Example","—"]
@@ -51,8 +52,11 @@ def body(lang, p):
           + cards(lang,[("日期","Dates"),("資格要求","Requirements"),("費用","Fee"),("報名方法","How to apply")],"示例裁判課程" if z else "Example referee course")
           + '<h3>'+("教練證書課程" if z else "Coach certification courses")+'</h3>'  # Steven 2026-10-03：教練課程要保留，暫放裁判事務
           + cards(lang,[("日期","Dates"),("資格要求","Requirements"),("費用","Fee"),("報名方法","How to apply")],"示例教練課程" if z else "Example coach course")
-          + '<h3>'+("裁判資訊" if z else "Referee information")+'</h3>'
-          + cards(lang,[("註冊裁判名單","Registered referees"),("規則更新","Rule updates")]))
+          + '<h3>'+("裁判名單" if z else "Referee roster")+'</h3>'
+          + '<div class="card col"><b>'+("IKF 一級" if z else "IKF Level 1")+'</b>'
+          + '<ul style="padding-inline-start:1.5em">'
+          + ''.join(f'<li>{name}</li>' for name in REFEREES)
+          + '</ul></div>')
     if p=="news":
         photos = '<div class="photos">'+'<div></div>'*6+'</div>'
         return sec(lang,p,
