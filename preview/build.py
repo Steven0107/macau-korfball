@@ -7,7 +7,7 @@ NAV = {
  "zh": {"index":"首頁","about":"本會簡介","competitions":"賽事資料","referees":"裁判事務","news":"最新消息","downloads":"下載區","contact":"聯繫我們"},
  "en": {"index":"Home","about":"About Us","competitions":"Competitions","referees":"Referees","news":"News","downloads":"Downloads","contact":"Contact Us"},
 }
-TBD = {"zh":"〔待 Steven 提供〕","en":"[To be provided by Steven]"}
+TBD = {"zh":"待公布","en":"To be announced"}
 ORG = {"zh":"澳門合球總會","en":"Macau China Korfball Association"}  # Steven 2026-10-03 確認
 DEMO = {"zh":"示例預覽：所有內容都係示例，未經確認，唔係真資料。","en":"Preview only: all content is example data, not confirmed."}
 
@@ -19,19 +19,20 @@ def cards(lang, rows, title=None):
     return "".join(f'<div class="card col"><b>{a if z else b}</b><span>{t}</span></div>' for a,b in rows)
 
 def sec(lang, p, inner, note=""):
-    return f'<section class="wrap sec"><h2>{NAV[lang][p]}</h2>{f"<p class=note>{note}</p>" if note else ""}{inner}</section>'
+    trail = f'<nav class="trail" aria-label="{"頁面位置" if lang == "zh" else "Breadcrumb"}"><a href="index.html">{NAV[lang]["index"]}</a><span aria-hidden="true">/</span><span aria-current="page">{NAV[lang][p]}</span></nav>'
+    return f'<section class="wrap sec">{trail}<h2>{NAV[lang][p]}</h2>{f"<p class=note>{note}</p>" if note else ""}{inner}</section>'
 
 def item(title, date, tag):
-    return f'<a class="card" href="#"><div><b>{title}</b><span>{date}</span></div><span class="tag">{tag}</span></a>'
+    return f'<div class="card"><div><b>{title}</b><span>{date}</span></div><span class="tag">{tag}</span></div>'
 
 def body(lang, p):
     z = lang=="zh"
     if p=="index":
-        return f'''<section class="hero"><div class="wrap">
-<h1>{"澳門<em>合球</em>總會" if z else "Macau China <em>Korfball</em> Association"}</h1>
-<p class="lead">{ORG["en"] if z else ORG["zh"]}</p>
-<p class="sub">{"一句總會簡介（示例）" if z else "One-line introduction (example)"}</p>
-<a class="btn" href="contact.html">{NAV[lang]["contact"]}</a></div></section>
+        links = "".join(f'<a href="{key}.html">{NAV[lang][key]}<span aria-hidden="true">↗</span></a>' for key in ("about","referees","downloads"))
+        return f'''<section class="feature"><div class="feature-copy"><h1>{ORG[lang]}</h1>
+<p>{ORG["en"] if z else ORG["zh"]}</p><a class="btn" href="competitions.html">{NAV[lang]["competitions"]} →</a></div>
+<img src="../assets/court.webp" alt="" width="1000" height="720"></section>
+<div class="wrap shortcuts">{links}</div>
 <section class="wrap sec"><h2>{NAV[lang]["news"]}</h2>
 {item("示例比賽" if z else "Example match","日期待定" if z else "Date TBC","賽事" if z else "Match")}
 {item("示例裁判課程" if z else "Example referee course","日期待定" if z else "Date TBC","裁判" if z else "Referees")}
@@ -54,11 +55,13 @@ def body(lang, p):
           + cards(lang,[("日期","Dates"),("資格要求","Requirements"),("費用","Fee"),("報名方法","How to apply")],"示例教練課程" if z else "Example coach course")
           + '<h3>'+("裁判名單" if z else "Referee roster")+'</h3>'
           + '<div class="card col"><b>'+("IKF 一級" if z else "IKF Level 1")+'</b>'
-          + '<ul style="padding-inline-start:1.5em">'
+          + '<div class="roster-search" hidden><label for="query">'+("搜尋裁判姓名" if z else "Search referees by name")+'</label>'
+          + '<input id="query" type="search" autocomplete="off"><output aria-live="polite"></output></div>'
+          + '<ul id="roster" style="padding-inline-start:1.5em">'
           + ''.join(f'<li>{name}</li>' for name in REFEREES)
-          + '</ul></div>')
+          + '</ul></div><script src="../assets/roster.js" defer></script>')
     if p=="news":
-        photos = '<div class="photos">'+'<div></div>'*6+'</div>'
+        photos = '<p class="note">'+("活動照片將於公布後上載。" if z else "Activity photos will appear here when available.")+'</p>'
         return sec(lang,p,
           item("示例比賽消息" if z else "Example match news","日期待定" if z else "Date TBC","賽事" if z else "Match")
           + item("示例活動" if z else "Example event","日期待定" if z else "Date TBC","活動" if z else "Event")
@@ -84,7 +87,7 @@ def page(lang, p):
 <input type="checkbox" id="menu" class="menu-toggle"><label for="menu" class="menu-btn" aria-label="Menu"><span></span>{"選單" if lang=="zh" else "Menu"}</label>
 <nav>{nav}</nav><a class="lang" href="../{other}/{p}.html">{"EN" if lang=="zh" else "中文"}</a></div></header>
 <main>{body(lang,p)}</main>
-<footer><div class="wrap">© {ORG[lang]} · {TBD[lang]}</div></footer></body></html>'''
+<footer><div class="wrap"><b>© {ORG[lang]}</b><a href="contact.html">{NAV[lang]["contact"]} ↗</a></div></footer></body></html>'''
 
 CSS = '''*{box-sizing:border-box;margin:0;padding:0}
 /* 總會綠淺色版（Steven 2026-10-04 揀方案二，跟 design/style-green-spec.md）。綠底一律白字（--on-accent）。--navy 而家係深綠 #0A4314。 */
@@ -147,7 +150,9 @@ footer{background:var(--navy);color:#C9DCCB;padding:24px 0;font-size:13px;margin
 '''
 shutil.rmtree("site",ignore_errors=True)
 os.makedirs("site/assets",exist_ok=True)
-open("site/assets/style.css","w").write(CSS)
+shutil.copy("roster.js","site/assets/roster.js")
+shutil.copy("court.webp","site/assets/court.webp")
+open("site/assets/style.css","w").write(CSS + open("theme.css").read())
 shutil.copy("../design/logo/official/mcka-logo-official.jpg","site/assets/logo.jpg")
 for lang in ("zh","en"):
     os.makedirs(f"site/{lang}",exist_ok=True)
