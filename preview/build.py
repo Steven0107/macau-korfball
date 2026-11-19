@@ -19,7 +19,8 @@ def cards(lang, rows, title=None):
     return "".join(f'<div class="card col"><b>{a if z else b}</b><span>{t}</span></div>' for a,b in rows)
 
 def sec(lang, p, inner, note=""):
-    return f'<section class="wrap sec"><h2>{NAV[lang][p]}</h2>{f"<p class=note>{note}</p>" if note else ""}{inner}</section>'
+    trail = f'<nav class="trail" aria-label="{"頁面位置" if lang == "zh" else "Breadcrumb"}"><a href="index.html">{NAV[lang]["index"]}</a><span aria-hidden="true">/</span><span aria-current="page">{NAV[lang][p]}</span></nav>'
+    return f'<section class="wrap sec">{trail}<h2>{NAV[lang][p]}</h2>{f"<p class=note>{note}</p>" if note else ""}{inner}</section>'
 
 def item(title, date, tag):
     return f'<div class="card"><div><b>{title}</b><span>{date}</span></div><span class="tag">{tag}</span></div>'
@@ -54,9 +55,11 @@ def body(lang, p):
           + cards(lang,[("日期","Dates"),("資格要求","Requirements"),("費用","Fee"),("報名方法","How to apply")],"示例教練課程" if z else "Example coach course")
           + '<h3>'+("裁判名單" if z else "Referee roster")+'</h3>'
           + '<div class="card col"><b>'+("IKF 一級" if z else "IKF Level 1")+'</b>'
-          + '<ul style="padding-inline-start:1.5em">'
+          + '<div class="roster-search" hidden><label for="query">'+("搜尋裁判姓名" if z else "Search referees by name")+'</label>'
+          + '<input id="query" type="search" autocomplete="off"><output aria-live="polite"></output></div>'
+          + '<ul id="roster" style="padding-inline-start:1.5em">'
           + ''.join(f'<li>{name}</li>' for name in REFEREES)
-          + '</ul></div>')
+          + '</ul></div><script src="../assets/roster.js" defer></script>')
     if p=="news":
         photos = '<p class="note">'+("活動照片將於公布後上載。" if z else "Activity photos will appear here when available.")+'</p>'
         return sec(lang,p,
@@ -147,6 +150,7 @@ footer{background:var(--navy);color:#C9DCCB;padding:24px 0;font-size:13px;margin
 '''
 shutil.rmtree("site",ignore_errors=True)
 os.makedirs("site/assets",exist_ok=True)
+shutil.copy("roster.js","site/assets/roster.js")
 shutil.copy("court.webp","site/assets/court.webp")
 open("site/assets/style.css","w").write(CSS + open("theme.css").read())
 shutil.copy("../design/logo/official/mcka-logo-official.jpg","site/assets/logo.jpg")
